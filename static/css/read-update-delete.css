@@ -1,0 +1,77 @@
+.container {
+    display: flex;
+    padding: 80px 10px 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+div.box {
+    background-color: rgb(84, 138, 155);
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgb(124, 196, 240);
+    min-width: 450px;
+}
+
+.container, h2.center, h4.center, h5.center, div.radio-container, div.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+select.center {
+    display: flex;
+    margin: auto;
+    width: 270px;
+    padding: 5px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+h4, h5, p {
+    margin: 0px;
+    padding: 5px 5px 5px;
+}
+
+.name-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 30px 0px;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: center;
+}
+
+button {
+    border-radius: 5px;
+    padding: 5px;
+    border-style: none;
+    margin: 9px;
+    width: 20%;
+}
+
+button.red-highlight:hover {
+    box-shadow: 0 0 20px rgb(240, 124, 124);
+    background-color:  rgb(240, 124, 124);
+}
+
+button.green-highlight:hover {
+    box-shadow: 0 0 20px rgb(126, 240, 124);
+    background-color:   rgb(126, 240, 124);
+}
+
+input[type=text] {
+    padding: 8px;
+    width: 250px;
+    border-radius: 4px;
+    border-style: none;
+}
+
+hr {
+    border: 4px double aliceblue;
+    margin: 20px 0px;
+}

@@ -1,0 +1,26 @@
+body {
+    background-color: #928f8f;
+}
+
+body, h2, ul {
+    margin: 0;
+    padding: 0;
+}
+
+h2.nav, ul {
+    padding-left: 10px;
+}
+
+ul li+li:before{
+    content: "/\00a0"; 
+}
+
+ul, li, a {
+    list-style: none;
+    display: inline;
+    text-decoration: none;
+}
+
+a:hover {
+    color: aliceblue;
+}

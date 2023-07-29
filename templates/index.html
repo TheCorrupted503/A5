@@ -7,6 +7,7 @@
         <meta name="author" content="Cody Renfro">
         <link rel="stylesheet" href="../static/css/index.css" type="text/css"/>
         <link rel="stylesheet" href="../static/css/nav-bar.css" type="text/css"/>
+        <link rel="stylesheet" href="../static/css/read-update-delete.css" type="text/css">
     </head>
     <body>
         <h2 class="nav">Gas Finding App</h2>
@@ -16,8 +17,15 @@
         <div class="index-container">
             <div class='box'>
                 <h2 class='title'>Welcome To the Gas Finding App</h2>
+                <hr></hr>
+                <h4>
+                    Please select a city from the drop down window below and press
+                </h4>
+                <h4>
+                    search to see where the cheapest Regular gas in that city is.
+                </h4>
+                <hr></hr>
                 <select class='center'>
-                    <option disabled selected value> Select A City </option>
                     {% for info in city_name %}
                                 {% if info['City_Name'] == city_name[0].info %}
                                     <option value="{{ info['city_id'] }}" selected> {{info['city_name']}}</option>
@@ -25,9 +33,10 @@
                                     <option value="{{ info['city_id'] }}"> {{info['city_name']}}</option> 
                                 {% endif %}
                     {% endfor %} 
+                    <option disabled selected value> Select A City </option>
                 </select>
                 <div class='center'>
-                    <button onclick="window.location.href = 'details';">Search</button>
+                    <button class = "green-highlight" type="submit" value="Create" name="Create" onclick="window.location.href = 'details';">Search</button>
                 </div>
             </div>
         </div>

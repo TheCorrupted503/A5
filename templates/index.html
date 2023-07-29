@@ -3,30 +3,31 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta charset="UTF-8">
-        <meta name="description" content="Project Step 3 Draft (HTML Interface, DML, & Revisions to Existing Deliverables).">
+        <meta name="description" content="CS 361 Final Project.">
         <meta name="author" content="Cody Renfro">
-        <title>Project Step 3 Draft</title>
         <link rel="stylesheet" href="../static/css/index.css" type="text/css"/>
         <link rel="stylesheet" href="../static/css/nav-bar.css" type="text/css"/>
     </head>
     <body>
-        <h2 class="nav">Navigation</h2>
+        <h2 class="nav">Gas Finding App</h2>
         <ul>
             <li>HOME</li>
         </ul>
         <div class="index-container">
             <div class='box'>
-                <h2 class='title'>Home Directory</h2>
+                <h2 class='title'>Welcome To the Gas Finding App</h2>
+                <select class='center'>
+                    <option disabled selected value> Select A City </option>
+                    {% for info in city_name %}
+                                {% if info['City_Name'] == city_name[0].info %}
+                                    <option value="{{ info['city_id'] }}" selected> {{info['city_name']}}</option>
+                                {% else %}
+                                    <option value="{{ info['city_id'] }}"> {{info['city_name']}}</option> 
+                                {% endif %}
+                    {% endfor %} 
+                </select>
                 <div class='center'>
-                    <button onclick="window.location.href = 'employee';">Employee</button>
-                    <button onclick="window.location.href = 'job_title';">Job Title</button>
-                    <button onclick="window.location.href = 'certification';">Certification</button>
-                    <button onclick="window.location.href = 'employee_certification';">Employee Certification</button>
-                </div>
-                <div class='center'>
-                    <button onclick="window.location.href = 'shift';">Shift</button>
-                    <button onclick="window.location.href = 'shift_days';">Shift Days</button>
-                    <button onclick="window.location.href = 'shift_names';">Shift Name</button>
+                    <button onclick="window.location.href = 'details';">Search</button>
                 </div>
             </div>
         </div>

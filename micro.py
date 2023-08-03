@@ -1,12 +1,11 @@
 import socket
 import threading
 
-HEADER = 64
+HEADER = 256
 PORT = 4321
 SERVER = socket.gethostbyname(socket.gethostname())
 ADDR = (SERVER, PORT)
 FORMAT = 'utf-8'
-DISCONNECT_MESSAGE = "Quit"
 
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 s.bind(ADDR)

@@ -20,7 +20,7 @@ def handle_client(conn, addr):
             msg = conn.recv(msg_length).decode(FORMAT).lower()
             print(f"Concatenating {msg} to URL")
             print(f"Sending new URL to client")
-            conn.send(str("en.m.wikipedia.org/wiki/" + msg).encode(FORMAT))
+            conn.send(str("https://en.m.wikipedia.org/wiki/" + msg).encode(FORMAT))
             connected = False
     conn.close()
 

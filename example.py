@@ -22,7 +22,7 @@ def send():
             c.send(send_length)
             c.send(message)
             data = c.recv(2048).decode(FORMAT)
-            print("Data has been sent to microservice\n")
+            print("Data has been sent to microservice:\n")
             print("Data received from microservice:")
             print(data)
             valid_input = False

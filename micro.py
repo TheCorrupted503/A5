@@ -31,7 +31,7 @@ def start():
         conn, addr = s.accept()
         t = threading.Thread(target=handle_client, args=(conn, addr))
         t.start()
-        print(f"[Active Connections] {threading.activeCount() - 1}")
+        print(f"[Active Connections] {threading.active_count() - 1}")
 
 print("[Starting] server is starting...")
 start()

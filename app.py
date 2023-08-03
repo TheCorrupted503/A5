@@ -40,4 +40,4 @@ def details():
     return render_template('details.html')
 
 if __name__ == "__main__":
-    app.run(port=46780, debug=True)
+    app.run(port=46789, debug=True)

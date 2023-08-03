@@ -47,5 +47,5 @@ en.m.wikipedia.org/wiki/disneyland
 To recieve data from the microservice you must use the python socket function .recv() and decode it using 'utf-8'  
 as the format in order to use it throughout your program as a string.  
 
-Sequence Diagram:
+Sequence Diagram:  
 ![Sequence Diagram](/images/A9-1.png?raw=true "UML Sequence Diagram")

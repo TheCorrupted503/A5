@@ -15,7 +15,7 @@ s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 s.bind(ADDR)  
 
 def send():  
-&nbsp;&nbsp;valid_input = True  
+    valid_input = True  
 &nbsp;&nbsp;while valid_input == True:  
 &nbsp;&nbsp;&nbsp;&nbsp;msg = input("Please enter a theme park: ")  
 &nbsp;&nbsp;&nbsp;&nbsp;if msg.lower() in ["disneyland", "sixflags"]:  

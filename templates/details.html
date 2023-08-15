@@ -1,27 +1,50 @@
-<html lang="en-US">
+<html>
     <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta charset="UTF-8">
-        <meta name="description" content="CS 361 Final Project">
-        <meta name="author" content="Cody Renfro">
-        <link rel="stylesheet" href="../static/css/read-update-delete.css" type="text/css">
-        <link rel="stylesheet" href="../static/css/nav-bar.css" type="text/css">
-        <link rel="stylesheet" href="../static/css/table.css" type="text/css">
+        <title>Where To Find The Cheapest Gas</title>
+        <link rel="stylesheet" href="static\css\style.css">
+        <link rel="icon" type="image/png" href="http://127.0.0.1:12345/static/images/favicon.png">
     </head>
     <body>
-        <h2 class="nav">Gas Finding App</h2>
-        <ul>
-            <li>DETAILS</a></li>
-            <div>
-                <button onclick="window.location.href = 'index';">Back</button>
+        <div class="banner">
+            <div class="navbar">
+                <img src="http://127.0.0.1:12345/static/images/favicon.png" class="logo">
+                <h1>Gas Finding App</h1>
+                <button class="button" type="button" onclick="window.location.href = 'index';">Back</button>
             </div>
-        </ul>
-        <div class="container">
-            <div class='box'>
-                <h2 class='center'>Cheapest Gas in Selected City</h2>
-                <table>
-                    <th>
-                        <tr>
-                        </tr>
-                    </th>
-                </table>
+            <div class="content">
+                <h2>Cheapest Gas in the Selected City</h2>
+                <hr></hr>
+                <div class="navbar-table">
+                    <h3>
+                        Gas Station Logo:
+                    </h3>
+                    <img src = {{logo_value}}></img>
+                </div>
+                <div class="navbar-table">
+                    <h3>
+                        Gas Station Name:
+                    </h3>
+                    <h3>
+                        {{gas_station_value}}
+                    </h3>
+                </div>
+                <div class="navbar-table">
+                    <h3>
+                        Gas Station Address:
+                    </h3>
+                    <h3>
+                        {{address_value}}
+                    </h3>
+                </div>
+                <div class="navbar-table">
+                    <h3>
+                        Regular Gas Price:
+                    </h3>
+                    <h3>
+                        {{price_value}}
+                    </h3>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

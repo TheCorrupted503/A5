@@ -1,43 +1,41 @@
-<!DOCTYPE html>
-<html lang="en-US">
+<html>
     <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta charset="UTF-8">
-        <meta name="description" content="CS 361 Final Project.">
-        <meta name="author" content="Cody Renfro">
-        <link rel="stylesheet" href="../static/css/index.css" type="text/css"/>
-        <link rel="stylesheet" href="../static/css/nav-bar.css" type="text/css"/>
-        <link rel="stylesheet" href="../static/css/read-update-delete.css" type="text/css">
+        <title>Where To Find The Cheapest Gas</title>
+        <link rel="stylesheet" href="static\css\style.css">
+        <link rel="icon" type="image/png" href="http://127.0.0.1:12345/static/images/favicon.png">
     </head>
     <body>
-        <h2 class="nav">Gas Finding App</h2>
-        <ul>
-            <li>HOME</li>
-        </ul>
-        <div class="index-container">
-            <div class='box'>
-                <h2 class='title'>Welcome To the Gas Finding App</h2>
-                <hr></hr>
-                <h4>
-                    Please select a city from the drop down window below and press
-                </h4>
-                <h4>
-                    search to see where the cheapest Regular gas in that city is.
-                </h4>
-                <hr></hr>
-                <select class='center'>
-                    {% for info in city_name %}
-                                {% if info['City_Name'] == city_name[0].info %}
-                                    <option value="{{ info['city_id'] }}" selected> {{info['city_name']}}</option>
-                                {% else %}
-                                    <option value="{{ info['city_id'] }}"> {{info['city_name']}}</option> 
-                                {% endif %}
-                    {% endfor %} 
-                    <option disabled selected value> Select A City </option>
-                </select>
-                <div class='center'>
-                    <button class = "green-highlight" type="submit" value="Create" name="Create" onclick="window.location.href = 'details';">Search</button>
-                </div>
+        <div class="banner">
+            <div class="navbar">
+                <img src="http://127.0.0.1:12345/static/images/favicon.png" class="logo">
+                <h1>Gas Finding App</h1>
+            </div>
+            <div class="content">
+                <form name = "cityName" action="/details" method="POST">
+                    <h2 class='title'>Welcome To the Gas Finding App</h2>
+                    <hr></hr>
+                    <h3>
+                        Please select a city from the drop down menu below. Then press the search
+                    </h3>
+                    <h3>
+                        button to see all details for the cheapest regular gas in that city.
+                    </h3>
+                    <hr></hr>
+                    <select name = cityName>
+                        <option value = "null">Select A City</option>
+                        <option value = "albany">Albany</option>
+                        <option value = "bend">Bend</option>
+                        <option value = "dallas">Dallas</option>
+                        <option value = "eugene">Eugene</option>
+                        <option value = "independence">Independence</option>
+                        <option value = "keizer">Keizer</option>
+                        <option value = "molalla">Molalla</option>
+                        <option value = "monmouth">Monmouth</option>
+                        <option value = "salem">Salem</option>
+                        <option value = "tualatin">Tualatin</option>
+                    </select>
+                    <button class="submit" type="submit" value="Create" name="Create">Search</button>
+                </form>
             </div>
         </div>
     </body>
